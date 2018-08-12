@@ -1,6 +1,8 @@
-<% @members.each do |member|%>
-  <p><%= link_to member.name, edit_member_path(member.id) %></p>
-  <p><%= member.yomi %></p>
-  <p><%= member.phone %></p>
+<% @members.each do |member| %>
+<div class="member">
+<p><%= link_to member.name, edit_member_path(member.id) %></p>
+<p><%= member.yomi %></p>
+<p><%= member.phone %></p>
+</div>
 <% end %>
 <%= link_to "新規登録", new_member_path %>
