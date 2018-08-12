@@ -1,5 +1,6 @@
-<h2>修正</h2>
+<h2>編集</h2>
 
 <%= render "form" %>
 
+<%= link_to "削除する", member_path(@member.id), method: :delete, data: {confirm: "本当に削除しますか？"} %>
 <%= link_to "戻る", members_path %>

@@ -23,6 +23,12 @@ class MembersController < ApplicationController
     redirect_to members_path
   end
   
+  def destroy
+    @member = find_member_by_id
+    @member.destroy
+    redirect_to members_path
+  end
+  
   private
   def member_params
     params.require(:member).permit(:name, :yomi, :phone)
