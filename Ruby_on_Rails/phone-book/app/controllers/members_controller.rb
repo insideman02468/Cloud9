@@ -9,8 +9,11 @@ class MembersController < ApplicationController
   
   def create
     @member = Member.new(member_params)
-    @member.save
-    redirect_to members_path
+    if @member.save
+      redirect_to members_path
+    else
+      render action: :new
+    end
   end
   
   def edit
@@ -19,8 +22,11 @@ class MembersController < ApplicationController
   
   def update
     @member = find_member_by_id
-    @member.update(member_params)
-    redirect_to members_path
+    if @member.update(member_params)
+      redirect_to members_path
+    else
+      render action: :edit
+    end
   end
   
   def destroy
