@@ -1,1 +1,7 @@
-<p><%= @message %></p>
+<% @members.each do |member|%>
+  <p><%= member.yomi %></p>
+  <p><%= member.name %></p>
+  <p><%= member.phone %></p>
+<% end %>
+
+<%= link_to "新規登録", new_member_path %>
