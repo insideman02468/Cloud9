@@ -9,17 +9,18 @@
     </ul>
   <% end %>
 
-  <p>
-  <%= f.label(:name, "名前") %>
-  <%= f.text_field :name %>
-  </p>
-  <p>
-  <%= f.label :yomi, "ヨミガナ" %>
-  <%= f.text_field :yomi %>
-  </p>
-  <p>
-  <%= f.label :phone, "電話番号" %>
-  <%= f.text_field :phone %>
-  </p>
-  <%= f.submit "登録" %>
+<p>
+<%= f.label :name %>
+<%= f.text_field :name %>
+</p>
+<p>
+<%= f.label :yomi %>
+<%= f.text_field :yomi %>
+</p>
+<p>
+<%= f.label :phone %>
+<%= f.text_field :phone %>
+</p>
+<%= f.submit %>
+
 <% end %>
