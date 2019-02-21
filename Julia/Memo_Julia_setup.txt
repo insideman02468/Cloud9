@@ -1,0 +1,8 @@
+Julia 1-1.0‚Å‚Í‚Ü‚Á‚½‚Æ‚±‚ëƒƒ‚
+ZMQ‚ÅƒGƒ‰[‚ğ‚Í‚­
+‘Îˆ–@
+
+Pkg.build("Conda")
+conda update conda
+Pkg.build("IJulia")
+using Ijulia
